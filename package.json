@@ -2,9 +2,10 @@
   "name": "hhh-second-screen",
   "version": "1.0.0",
   "description": "second screen voor heel holland bakt (MAX)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node server.js"
   },
   "author": "Sjoerd Beentjes",
   "license": "ISC",
