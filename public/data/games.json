@@ -1,0 +1,62 @@
+{
+    "games": [{
+        "title": "Wie wint de signatuuropdracht?",
+        "description": "Zet de kandidaten in de goede volgorde",
+        "candidates": [{
+            "name": "Menno de Koning",
+            "imgUrl": "menno.jpg",
+            "description": "Won al 1 aflevering dit seizoen"
+        }, {
+            "name": "Jaques",
+            "imgUrl": "jacques.jpg",
+            "description": "Won al 2 aflevering dit seizoen"
+        }, {
+            "name": "Matthieu",
+            "imgUrl": "matthieu.jpg",
+            "description": "Won al 3 aflevering dit seizoen"
+        }, {
+            "name": "Corina",
+            "imgUrl": "corina.jpg",
+            "description": "Won al 2 aflevering dit seizoen"
+        }]
+    }, {
+        "title": "Bokkenpootjes",
+        "description": "Laat zien hoe jij de bokkenpootjes zou maken",
+        "steps": [
+            "Breek witte chocolade in stukjes en doe in een schaal",
+            "Laat afkoelen en opstijven in de koelkast",
+            "Spuit op de bakplaten gelijke stroken beslag",
+            "Bak in ongeveer 20 minuten af in de oven. Let op dat de koekjes gelijk kleuren"
+        ],
+        "ingredients": [
+            "300 gram witte chocolade",
+            "0,50 vanillestokje",
+            "150 gram slagroom",
+            "200 gram eiwitten",
+            "375 gram suiker",
+            "40 gram bloem",
+            "125 gram amandelmeel",
+            "250 gram amandelschaafsel"
+        ]
+    }, {
+        "title": "Wie wint er met het spektakelstuk?",
+        "description": "Zet de kandidaten in de goede volgorde",
+        "candidates": [{
+            "name": "Menno de Koning",
+            "imgUrl": "menno.jpg",
+            "description": "Won al 1 aflevering dit seizoen"
+        }, {
+            "name": "Jaques",
+            "imgUrl": "jacques.jpg",
+            "description": "Won al 2 aflevering dit seizoen"
+        }, {
+            "name": "Matthieu",
+            "imgUrl": "matthieu.jpg",
+            "description": "Won al 3 aflevering dit seizoen"
+        }, {
+            "name": "Corina",
+            "imgUrl": "corina.jpg",
+            "description": "Won al 2 aflevering dit seizoen"
+        }]
+    }]
+}

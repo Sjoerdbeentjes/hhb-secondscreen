@@ -1,0 +1,28 @@
+<% include partials/head.ejs %>
+<!-- timer bar -->
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="<%= timeNowGameOne %>"
+  aria-valuemin="0" aria-valuemax="100" style="width:<%= timeNowGameOne %>%">
+  </div>
+</div>
+
+<main class="game-screen container text-center signatuur">
+    <h1><%= game.title %></h1>
+    <p class="description"><%= game.description %></p>
+    <ol class="list-group candidates-list no-swipe" id="slippylist">
+      <% for(var i = 0; i <= game.candidates.length - 1; i++) { %>
+          <li class="list-group-item">
+            <i class="fa fa-arrows candidate-arrows"></i>
+            <div class="thumb-candidate" style="background-image:url(img/kandidaten/<%=game.candidates[i].imgUrl %>);"></div>
+            <h1><%=game.candidates[i].name %></h1>
+            <p><i><%=game.candidates[i].description %></i></p>
+          </li>
+      <% } %>
+    </ol>
+
+    <form class="text-center" method="post">
+        <input type="submit" class="btn btn-primary btn-lg" value="Opslaan">
+    </form>
+</main>
+ 
+<% include partials/foot.ejs %>

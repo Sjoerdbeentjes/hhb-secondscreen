@@ -1,0 +1,46 @@
+<% include partials/head.ejs %>
+
+<div class="games">
+  <i type="button" class="fa fa-trophy game-status no-game<% if (gameFirst === true) { %> disabled <% } %>" data-toggle="modal"  <% if (gameFirst === false) { %> data-target="#gameOne" <% } %>></i>
+  <i type="button" class="fa fa-trophy game-status no-game<% if (gameSecond === true) { %> disabled <% } %>" data-toggle="modal"  <% if (gameSecond === false) { %> data-target="#gameTwo" <% } %>></i>
+  <i type="button" class="fa fa-trophy game-status no-game<% if (gameThird === true) { %> disabled <% } %>" data-toggle="modal"  <% if (gameThird === false) { %> data-target="#gameThree" <% } %>></i>
+  <!-- Trigger the modal with a button -->
+  <i type="button" class="fa fa-info-circle disabled" data-toggle="modal" data-target="#myModal"></i>
+</div>
+
+<main class="live container">
+  <section class="fragments">
+    <h1 class="text-center">Achter de schermen bij de kandidaten:</h1>
+    <% for(var i = 0; i <= videoThumbs.length - 1; i++) { %>
+        <div class="fragment col-md-4">
+          <div class="panel panel-default">
+            <a href="live/video/<%= i %>" class="video-preview"><img class="media-object" src="<%= videoThumbs[i].imgUrl %>" alt="video"></a>
+            <div class="panel-body">
+              <h4><%= videoThumbs[i].title %></h4>
+              <p><%= videoThumbs[i].caption %></p>
+            </div>
+          </div>
+        </div>
+    <% } %>
+  </section>
+
+  <section class="recipes">
+    <h1 class="text-center">Recepten uit de aflevering:</h1>
+    <% for(var i = 0; i <= recipeThumbs.length - 1; i++) { %>
+        <div class="fragment col-md-4">
+          <div class="panel panel-default">
+            <a href="live/recipe/<%= i %>" class="recipe-preview"><img class="media-object" src="<%= recipeThumbs[i].imgUrl %>" alt="video"></a>
+            <div class="panel-body">
+              <h4><%= recipeThumbs[i].title %></h4>
+            </div>
+          </div>
+        </div>
+    <% } %>
+  </section>
+</main>
+
+
+
+</main>
+ 
+<% include partials/foot.ejs %>

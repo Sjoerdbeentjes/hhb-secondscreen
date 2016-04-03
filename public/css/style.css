@@ -1,0 +1,350 @@
+body {
+	width: 100%;
+	overflow: auto;
+	min-height: 105vh;
+	font-family: 'Roboto', sans-serif; 
+}
+
+.navbar-toggle  {
+	display: none;
+}
+
+.hhh-logo {
+	padding: 0.4em;
+}
+
+.hhh-logo img {
+	height: 100%;
+}
+
+.header-photo {
+	margin-top: -20px;
+}
+
+.header-photo img {
+	width: 100vw;
+	max-width: 550px;
+	text-align: center;
+}
+
+video {
+	width: 100%;
+	margin: 0;
+}
+
+nav.navbar {
+	margin-bottom: 0;
+	background: #2AADB0;
+	border-bottom: none;
+}
+
+.navbar .nav,
+.navbar .nav > li {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+}
+
+.navbar-inner {
+  text-align:center;
+}
+
+/* Landing page */
+
+.landing h1 {
+	margin: 1em 0;
+}
+
+.landing p {
+	margin-bottom: 3em;
+	text-align: center;
+}
+
+.header-photo {
+	text-align: center;
+}
+
+.media-object {
+	width: 100%;
+}
+
+.panel-footer {
+	border: none;
+}
+
+.panel img {
+	border-radius: 3px 3px 0 0;
+}
+
+.video-preview::before {
+	display: block;
+	content: "";
+	font-family: FontAwesome;
+	font-size: 7em;
+	width: 90%;
+	padding-top: 10%;
+	text-align: center;
+	position: absolute;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+main h1 {
+	margin: 20px 0;
+}
+
+section {
+	overflow: auto;
+}
+
+nav .fa {
+	color: white;
+	margin: 9px 0.5em 0;
+	font-size: 2.3em;
+}
+
+nav {
+	margin-bottom: 0;
+}
+
+section h1, /*main h1*/ {
+	margin-bottom: 1em;
+}
+
+.game-screen .list-group-item {
+	min-height: 5.5em;
+}
+
+.game-screen .candidates-list {
+	clear: both;
+}
+
+.game-screen.signatuur .candidates-list li {
+	overflow: auto;
+	cursor: pointer;
+	outline: none;
+	display: list-item;
+}
+
+.game-screen.signatuur .candidates-list .thumb-candidate {
+	display: inline-block;	
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	background-size: cover; 
+	background-position: 50;
+	float: left;
+}
+
+.game-screen.signatuur .candidates-list h1 {
+	font-size: 1.7em;
+	text-align: left;
+	float: left;
+	margin: 0 1em 0em 1em;
+}
+.game-screen.signatuur .candidates-list p {
+	font-size: 1em;
+	float: left;
+	margin: 0.5em 1em 0 2em;
+}
+
+.game-screen.signatuur .candidates-list p {
+	font-size: 1em;
+	float: left;
+	margin: 0.5em 1em 0 2em;
+}
+
+.game-screen.technisch .candidates-list p {
+	font-size: 1.5em;
+	text-align: left;
+	margin: 0 1em 0em 0;
+	width: 80%;
+	font-weight: 400;
+}
+
+.game-screen .candidate-arrows {
+	float: right;
+	font-size: 2em;
+	line-height: 2.1em;
+	clear: both;
+}
+
+.ingredients {
+	margin: 0 0 1em 0;
+}
+
+.no-game {
+	color: white;
+}
+
+.game {
+	color: #FF8000 !important;
+}
+
+.game-screen .description {
+	font-size: 1.2em;
+	margin: 1em 0;
+}
+
+.games {
+	text-align: center;
+	width: auto;
+	display: block;
+	float: right;
+	margin-top: 0.2em;
+}
+
+main {
+	color: black;
+}
+
+.disabled {
+	color: rgba(0,0,0,0.3) !important;
+}
+
+.navbar-header {
+	z-index: 100;
+	width: 20%;
+	display: inline-block;
+}
+
+nav .fa.fa-info-circle {
+	color: #FAE5D0;
+	margin-right: 0;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.fa.fa-info-circle {
+	cursor: pointer;
+}
+
+.progress {
+	border-radius: 0;
+	height: 1em;
+}
+
+.progress-bar {
+	background: #155557;
+}
+
+.btn-primary {
+	background: #FF8000;
+	border: none;
+	position: relative;
+	box-shadow: 0 6px #F7BF84;
+	float: none;
+	margin: 0 auto;
+}
+
+.btn-primary:hover {
+	background: #FF8000;
+	border: none;
+	top: 2px;
+	box-shadow: 0 4px #F7BF84;
+}
+
+
+.alert a {
+	margin-left: 1em;
+}
+
+/*star burst 12 van https://css-tricks.com/examples/ShapesOfCSS/*/
+#burst-12 {
+    background: #ADD691;
+    width: 7em;
+    height: 7em;
+    position: relative;
+    text-align: center;
+    left: 0;
+	margin: 2em;
+	margin-top: 3em;
+	display: inline-block;
+	float: left;
+}
+#burst-12:before, #burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 7em;
+    width: 7em;
+    background: #ADD691;
+}
+#burst-12:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+#burst-12:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
+
+.scorenumber {
+	position: absolute;
+}
+
+.share {
+	margin-top: 5em;
+	background: blue;
+	padding: 1em 2em;
+	color: white;
+	float: left;
+	border-radius: 0.5em;
+	margin: 0.5em;
+}
+
+.share:hover {
+	color: white;
+}
+
+.share.twitter {
+	background: #579CCD;
+}
+
+.share.facebook {
+	background: #395B9B;
+}
+
+.share .fa {
+	font-size: 2em;
+}
+
+.share-btns {
+	margin-top: 2em;
+	padding-left: 4em;
+}
+
+@media screen and (min-width: 500px) {
+	.header-photo {
+		margin-top: 1em;
+	}
+
+	video {
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+
+	.header-photo img {
+		border-radius: 1em;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+		margin-left: 0;
+		padding-left: 0;
+	}
+}
+
+}

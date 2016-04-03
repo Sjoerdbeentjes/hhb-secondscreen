@@ -1,0 +1,38 @@
+{
+    "videos": [{
+        "title": "Menno's voorbereiding",
+        "caption": "Dit is een test caption",
+        "imgUrl": "img/video1.jpg",
+        "vidUrl":  "vid/vid1.mp4"
+    }, {
+        "title": "Rutger's voorbereiding",
+        "caption": "Dit is een test caption 2",
+        "imgUrl": "img/video2.jpg",
+        "vidUrl":  "vid/vid1.mp4"
+    }, {
+        "title": "Erik's voorbereiding",
+        "caption": "Dit is een test caption 3",
+        "imgUrl": "img/video3.jpg",
+        "vidUrl":  "vid/vid1.mp4"
+    }],
+    "recipes": [{
+        "title" : "Bokkenpootjes",
+        "imgUrl" : "img/video1.jpg",
+        "steps" : [
+            "Breek witte chocolade in stukjes en doe in een schaal",
+            "Laat afkoelen en opstijven in de koelkast",
+            "Spuit op de bakplaten gelijke stroken beslag",
+            "Bak in ongeveer 20 minuten af in de oven. Let op dat de koekjes gelijk kleuren"
+        ],
+        "ingredients" : [
+            "300 gram witte chocolade",
+            "0,50 vanillestokje",
+            "150 gram slagroom",
+            "200 gram eiwitten",
+            "375 gram suiker",
+            "40 gram bloem",
+            "125 gram amandelmeel",
+            "250 gram amandelschaafsel"
+        ]
+    }]
+}

@@ -1,0 +1,36 @@
+<% include partials/head.ejs %>
+
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="<%= timeNowGameTwo %>"
+  aria-valuemin="0" aria-valuemax="100" style="width:<%= timeNowGameTwo %>%">
+  </div>
+</div>
+
+<main class="game-screen technisch container text-center">
+    <h1><%= game.title %></h1>
+    <p class="description"><%= game.description %></p>
+    <button type="button" class="btn btn-default ingredients" data-toggle="collapse" data-target="#ingredients">Ingredienten</button>
+    <div id="ingredients" class="collapse">
+      <ul>
+      <% for(var i = 0; i <= game.ingredients.length - 1; i++) { %>
+          <li class="text-left">
+            <p><%=game.ingredients[i] %></p>
+          </li>
+      <% } %>
+    </ul>
+    </div>
+    <ol class="list-group candidates-list no-swipe" id="slippylist">
+      <% for(var i = 0; i <= game.steps.length - 1; i++) { %>
+          <li class="list-group-item">
+            <i class="fa fa-arrows candidate-arrows"></i>
+            <p><%=game.steps[i] %></p>
+          </li>
+      <% } %>
+    </ol>
+
+    <form class="text-center" method="post">
+        <input type="submit" class="btn btn-primary btn-lg" value="Opslaan">
+    </form>
+</main>
+ 
+<% include partials/foot.ejs %>

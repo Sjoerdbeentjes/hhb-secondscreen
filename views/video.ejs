@@ -1,0 +1,10 @@
+<% include partials/head.ejs %>
+
+<main class="video">
+	<h1 class="text-center"><%= video.title %></h1>
+	<video controls>
+  		<source src="/<%= video.vidUrl %>" type="video/mp4">
+  	</video>
+</main>
+ 
+<% include partials/foot.ejs %>

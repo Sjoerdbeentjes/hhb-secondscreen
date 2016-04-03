@@ -1,0 +1,17 @@
+<% include partials/head.ejs %>
+
+<main class="container video">
+  	<h1><%= recipe.title %></h1>
+  	<ul>
+	  	<% for(var i = 0; i <= recipe.ingredients.length - 1; i++) { %>
+	       <li><%= recipe.ingredients[i] %></li> 
+	    <% } %>
+    </ul>
+    <ul class="list-group">
+		<% for(var i = 0; i <= recipe.steps.length - 1; i++) { %>
+	       <li class="list-group-item"><%= [i +1] %>. <%= recipe.steps[i] %></li>
+	    <% } %>
+	</ul>
+</main>
+ 
+<% include partials/foot.ejs %>
