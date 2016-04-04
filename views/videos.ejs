@@ -1,0 +1,22 @@
+<% include partials/head.ejs %>
+
+<main class="live container">
+  <div class="row">
+    <section class="fragments">
+      <h1 class="text-center">Achter de schermen:</h1>
+      <% for(var i = 0; i <= videoThumbs.length - 1; i++) { %>
+          <div class="fragment col-md-4">
+            <div class="panel panel-default">
+              <a href="videos/video/<%= i %>" class="video-preview"><img class="media-object" src="<%= videoThumbs[i].imgUrl %>" alt="video"></a>
+              <div class="panel-body">
+                <h4><%= videoThumbs[i].title %></h4>
+                <p><%= videoThumbs[i].caption %></p>
+              </div>
+            </div>
+          </div>
+      <% } %>
+    </section>
+  </div>
+</main>
+ 
+<% include partials/foot.ejs %>

@@ -1,42 +1,58 @@
 <% include partials/head.ejs %>
 
-<div class="games">
-  <i type="button" class="fa fa-trophy game-status no-game<% if (gameFirst === true) { %> disabled <% } %>" data-toggle="modal"  <% if (gameFirst === false) { %> data-target="#gameOne" <% } %>></i>
-  <i type="button" class="fa fa-trophy game-status no-game<% if (gameSecond === true) { %> disabled <% } %>" data-toggle="modal"  <% if (gameSecond === false) { %> data-target="#gameTwo" <% } %>></i>
-  <i type="button" class="fa fa-trophy game-status no-game<% if (gameThird === true) { %> disabled <% } %>" data-toggle="modal"  <% if (gameThird === false) { %> data-target="#gameThree" <% } %>></i>
-  <!-- Trigger the modal with a button -->
-  <i type="button" class="fa fa-info-circle disabled" data-toggle="modal" data-target="#myModal"></i>
-</div>
+<main class="container games-live">
+  <section class="live">
+    <h1 class="text-center">Speel mee:</h1>
+      <div class="row">
 
-<main class="live container">
-  <section class="fragments">
-    <h1 class="text-center">Achter de schermen bij de kandidaten:</h1>
-    <% for(var i = 0; i <= videoThumbs.length - 1; i++) { %>
         <div class="fragment col-md-4">
           <div class="panel panel-default">
-            <a href="live/video/<%= i %>" class="video-preview"><img class="media-object" src="<%= videoThumbs[i].imgUrl %>" alt="video"></a>
+            <a href="/signatuur" class="game-one"><img class="media-object" src="/img/video1.jpg" alt="game-one"></a>
             <div class="panel-body">
-              <h4><%= videoThumbs[i].title %></h4>
-              <p><%= videoThumbs[i].caption %></p>
+              <h4>Signatuuropdracht</h4>
+              <p>Voorspel hier de uitslag van de signatuuropdracht</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bar-1" role="progressbar" aria-valuenow="<%= timeNowGameOne %>"
+              aria-valuemin="0" aria-valuemax="100" style="width:<%= timeNowGameOne %>%">
+              </div>
             </div>
           </div>
         </div>
-    <% } %>
-  </section>
 
-  <section class="recipes">
-    <h1 class="text-center">Recepten uit de aflevering:</h1>
-    <% for(var i = 0; i <= recipeThumbs.length - 1; i++) { %>
         <div class="fragment col-md-4">
           <div class="panel panel-default">
-            <a href="live/recipe/<%= i %>" class="recipe-preview"><img class="media-object" src="<%= recipeThumbs[i].imgUrl %>" alt="video"></a>
+            <a href="/technisch" class="game-one"><img class="media-object" src="/img/video1.jpg" alt="game-one"></a>
             <div class="panel-body">
-              <h4><%= recipeThumbs[i].title %></h4>
+              <h4>Technische opdracht</h4>
+              <p>Raadt de volorde van het recept</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bar-2" role="progressbar" aria-valuenow="<%= timeNowGameTwo %>"
+              aria-valuemin="0" aria-valuemax="100" style="width:<%= timeNowGameTwo %>%">
+              </div>
             </div>
           </div>
         </div>
-    <% } %>
+
+        <div class="fragment col-md-4">
+          <div class="panel panel-default"/>
+            <a href="/spektakel" class="game-one"><img class="media-object" src="/img/video1.jpg" alt="game-one"></a>
+            <div class="panel-body">
+              <h4>Spektakelstuk</h4>
+              <p>Voorspel hier de uitslag van de signatuuropdracht</p>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bar-3" role="progressbar" aria-valuenow="<%= timeNowGameThree %>"
+              aria-valuemin="0" aria-valuemax="100" style="width:<%= timeNowGameThree %>%">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
   </section>
+
 </main>
 
 

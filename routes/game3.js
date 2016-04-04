@@ -22,16 +22,6 @@ router.get('/', function(req, res, next) {
 	res.render('game3.ejs');
 
 	req.app.locals.timeNowGameThree;
-
-	function timeGameThree(){
-	  if (req.app.locals.timeNowGameThree > 0) {
-	      req.app.locals.timeNowGameThree--;
-	      console.log(req.app.locals.timeNowGameThree);
-	  	  setTimeout(timeGameThree, 100);
-	  }
-	}
-
-	timeGameThree() 
 });
 
 router.post('/', function(req, res, next) {

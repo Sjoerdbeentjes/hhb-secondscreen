@@ -18,13 +18,29 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-inverse right navbar-static-top">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand hhh-logo" href="/live"><img src="/img/hhh-logo.svg" alt="logo"></a>
         </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/live">Speel mee</a></li>
+            <li><a href="/videos">Achter de schermen</a></li>
+            <li><a href="/recepten">Recepten</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </nav>
+
 
 
     <% if (gameFirst === true && gameSecond === true && gameThird === true) { %>  
@@ -32,112 +48,5 @@
       <div class="alert alert-success" role="alert">U heeft alle spelletjes ingevuld. <a class="btn btn-primary btn-md" href="/score">Bekijk hier uw score!</a></div>
 
     <% } %>
-
-    <!-- Modal info -->
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Speluitleg</h4>
-          </div>
-          <div class="modal-body">
-            <p>Welkom bij het tweede scherm van Heel Holland bakt. Hier kunt u verder kijken dan alleen het programma op uw tv. Doe mee met het programma door de spelletjes (trofee's boven in beeld) of bekijk hoe de bakkers zich hebben voorbereid op de uitzending. Ook kunt u als de bakkers aan het bakken zijn de recepten die in het programma worden gemaakt bekijken.</p>
-            <p>De spelletjes werken als volgt:</p>
-            <ul>
-              <li>Bovenin staan drie trofee's</li>
-              <li>Als een van deze oranje oplicht kunt u deze spelen <i class="fa fa-trophy"></i></li>
-              <li>Als u op opslaan heeft gedrukt of als de tijd op is, is het spel afgelopen en wordt de trofee grijs</li>
-              <li>Wanneer alle spelletjes gespeeld zijn verschijnt er een "bekijk score" knop en kunt u uw score bekijken</li>
-              <li>Veel plezier!</li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Uitleg sluiten</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Modal gameOne -->
-    <div id="gameOne" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Speluitleg 'Signatuuropdracht'</h4>
-          </div>
-          <div class="modal-body">
-            <p>Wanneer u op 'spel starten' drukt begint het eerst spel. Hier kan je tijdens de opdracht in het programma de eindstand voorspellen. Hieronder de regels:</p>
-            <ul>
-              <li>Wanneer u op start drukt begint de tijd te lopen</li>
-              <li>U heeft één minuut om de opdracht te voltooien</li>
-              <li>Wanneer u op opslaan heeft gedrukt keert u terug naar het live scherm en kunt u uw beslissing niet meer wijzigen</li>
-            </ul>
-          </div>
-          <div class="modal-footer center-block">
-            <a href="/signatuur"><button type="button" class="text-center btn btn-primary btn-lg">Spel starten</button></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Modal gameTwo -->
-    <div id="gameTwo" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Speluitleg 'Technische opdracht'</h4>
-          </div>
-          <div class="modal-body">
-            <p>Wanneer u op 'spel starten' drukt begint het eerst spel. Hier kan je tijdens de opdracht in het programma de eindstand voorspellen. Hieronder de regels:</p>
-            <ul>
-              <li>Wanneer u op start drukt begint de tijd te lopen</li>
-              <li>U heeft één minuut om de opdracht te voltooien</li>
-              <li>Wanneer u op opslaan heeft gedrukt keert u terug naar het live scherm en kunt u uw beslissing niet meer wijzigen</li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <a href="/technisch"><button type="button" class="text-center btn btn-primary btn-lg">Spel starten</button></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Modal gameThree -->
-    <div id="gameThree" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Speluitleg 'Spektakelstuk'</h4>
-          </div>
-          <div class="modal-body">
-            <p>Wanneer u op 'spel starten' drukt begint het eerst spel. Hier kan je tijdens de opdracht in het programma de eindstand voorspellen. Hieronder de regels:</p>
-            <ul>
-              <li>Wanneer u op start drukt begint de tijd te lopen</li>
-              <li>U heeft één minuut om de opdracht te voltooien</li>
-              <li>Wanneer u op opslaan heeft gedrukt keert u terug naar het live scherm en kunt u uw beslissing niet meer wijzigen</li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <a href="/spektakel"><button type="button" class="text-center btn btn-primary btn-lg">Spel starten</button></a>
-          </div>
-        </div>
-
-      </div>
-    </div>
 
 

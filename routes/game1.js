@@ -23,15 +23,6 @@ router.get('/', function(req, res, next) {
 
 	req.app.locals.timeNowGameOne;
 
-	function timeGameOne(){
-	  if (req.app.locals.timeNowGameOne > 0) {
-	      req.app.locals.timeNowGameOne--;
-	      console.log(req.app.locals.timeNowGameOne);
-	  	  setTimeout(timeGameOne, 100);
-	  }
-	}
-
-	timeGameOne();
 });
 
 router.post('/', function(req, res, next) {

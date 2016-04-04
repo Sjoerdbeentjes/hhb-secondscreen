@@ -5,16 +5,13 @@ body {
 	font-family: 'Roboto', sans-serif; 
 }
 
-.navbar-toggle  {
-	display: none;
-}
-
 .hhh-logo {
 	padding: 0.4em;
 }
 
 .hhh-logo img {
 	height: 100%;
+	margin-left: 5px !important;
 }
 
 .header-photo {
@@ -27,28 +24,40 @@ body {
 	text-align: center;
 }
 
+.row {
+	overflow-x: hidden;
+}
+
 video {
 	width: 100%;
 	margin: 0;
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background: rgba(255,255,255, 0.2);
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background: rgba(255,255,255, 0.2);
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background: white;
+}
+
+nav.navbar ul li:hover {
+	background: rgba(255,255,255, 0.2);
+}
+
 nav.navbar {
-	margin-bottom: 0;
 	background: #2AADB0;
 	border-bottom: none;
+	color: white !important;
+	margin-bottom: 0;
 }
 
-.navbar .nav,
-.navbar .nav > li {
-  float:none;
-  display:inline-block;
-  *display:inline; /* ie7 fix */
-  *zoom:1; /* hasLayout ie7 trigger */
-  vertical-align: top;
-}
-
-.navbar-inner {
-  text-align:center;
+nav.navbar ul li a {
+	color: white !important;
 }
 
 /* Landing page */
@@ -93,20 +102,6 @@ nav.navbar {
 
 main h1 {
 	margin: 20px 0;
-}
-
-section {
-	overflow: auto;
-}
-
-nav .fa {
-	color: white;
-	margin: 9px 0.5em 0;
-	font-size: 2.3em;
-}
-
-nav {
-	margin-bottom: 0;
 }
 
 section h1, /*main h1*/ {
@@ -204,22 +199,6 @@ main {
 	color: rgba(0,0,0,0.3) !important;
 }
 
-.navbar-header {
-	z-index: 100;
-	width: 20%;
-	display: inline-block;
-}
-
-nav .fa.fa-info-circle {
-	color: #FAE5D0;
-	margin-right: 0;
-}
-
-.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
-	margin-right: 0;
-	margin-left: 0;
-}
-
 .fa.fa-info-circle {
 	cursor: pointer;
 }
@@ -249,9 +228,31 @@ nav .fa.fa-info-circle {
 	box-shadow: 0 4px #F7BF84;
 }
 
+.score-number {
+	position: absolute;
+	z-index: 900;
+	font-size: 4em;
+	left: 0.17em;
+	color: white;
+}
+
+.score-screen .recipes {
+	clear: both;
+	text-align: left;
+}
+
 
 .alert a {
 	margin-left: 1em;
+}
+
+.panel .progress {
+	margin-bottom: 0;
+	border-radius: 0 0 4px 4px;
+}
+
+.games-live .panel-body {
+	padding-bottom: 10px;
 }
 
 /*star burst 12 van https://css-tricks.com/examples/ShapesOfCSS/*/
@@ -266,6 +267,7 @@ nav .fa.fa-info-circle {
 	margin-top: 3em;
 	display: inline-block;
 	float: left;
+	z-index: 500;
 }
 #burst-12:before, #burst-12:after {
     content: "";
@@ -338,13 +340,4 @@ nav .fa.fa-info-circle {
 	.header-photo img {
 		border-radius: 1em;
 	}
-}
-
-@media screen and (min-width: 768px) {
-	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-		margin-left: 0;
-		padding-left: 0;
-	}
-}
-
 }

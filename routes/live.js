@@ -1,64 +1,59 @@
 var express = require('express');
 var router = express.Router();
 
-var liveData = require('../public/data/live-data.json')
+var liveData = require('../public/data/games.json')
 
 router.get('/', function(req, res, next) {
-	// menu items
-	res.locals.live = "active";
-	res.locals.fragments = "";
-	res.locals.recipes = "";
+    // menu items
+    res.locals.live = "active";
+    res.locals.fragments = "";
+    res.locals.recipes = "";
 
-	// set title
-	title = "Live";
-	res.locals.title = title;
+    // set title
+    title = "Speel mee";
+    res.locals.title = title;
 
-	//set timer 
-	req.app.locals.timeNowGameOne = 100;
+    // load view
+    res.render('live');
 
-	res.locals.videoThumbs = liveData.videos;
-	res.locals.recipeThumbs = liveData.recipes;
+    console.log(req.app.locals.gameFirst);
+    console.log(req.app.locals.gameSecond);
+    console.log(req.app.locals.gameThird);
 
-	// load view
-	res.render('live');
+    req.app.locals.timeNowGameOne;
+    req.app.locals.timeNowGameTwo;
+    req.app.locals.timeNowGameThree;
 
-	console.log(req.app.locals.gameFirst);
-	console.log(req.app.locals.gameSecond);
-	console.log(req.app.locals.gameThird);
+    function timeGameOne() {
+        if (req.app.locals.timeNowGameOne > 0) {
+            req.app.locals.timeNowGameOne--;
+            console.log(req.app.locals.timeNowGameOne);
+            setTimeout(timeGameOne, 3000);
+        }
+    }
 
-});
 
-router.get('/video/:index', function(req, res, next) {
-	// menu items
-	res.locals.live = "active";
-	res.locals.fragments = "";
-	res.locals.recipes = "";
+    function timeGameTwo() {
+        if (req.app.locals.timeNowGameTwo > 0) {
+            req.app.locals.timeNowGameTwo--;
+            console.log(req.app.locals.timeNowGameTwo);
+            setTimeout(timeGameOne, 3000);
+        }
+    }
 
-	// set title
-	title = "Live";
-	res.locals.title = title;
+    function timeGameThree() {
+        if (req.app.locals.timeNowGameThree > 0) {
+            req.app.locals.timeNowGameThree--;
+            console.log(req.app.locals.timeNowGameThree);
+            setTimeout(timeGameOne, 3000);
+        }
+    }
 
-	res.locals.video = liveData.videos[req.params.index];
+    timeGameOne()
 
-	// load view
-	res.render('video');
+    setTimeout(function() { timeGameTwo(); }, 30000);
+    setTimeout(function() { timeGameThree(); }, 30000);
 
-});
-
-router.get('/recipe/:index', function(req, res, next) {
-	// menu items
-	res.locals.live = "active";
-	res.locals.fragments = "";
-	res.locals.recipes = "";
-
-	// set title
-	title = "Live";
-	res.locals.title = title;
-
-	res.locals.recipe = liveData.recipes[req.params.index];
-
-	// load view
-	res.render('recipe');
 });
 
 module.exports = router;

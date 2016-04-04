@@ -1,17 +1,30 @@
-var express = require('express'),
-	fs = require('fs');
+var express = require('express');
 var router = express.Router();
 
 var liveData = require('../public/data/live-data.json')
 
-var games = require('../public/data/games.json')
-var game = games.games[2];
-
 router.get('/', function(req, res, next) {
-	res.locals.recipeThumbs = liveData.recipes;
-	
-	res.locals.title = "score";
-	res.render('score');
+  // menu items
+  res.locals.live = "active";
+  res.locals.fragments = "";
+  res.locals.recipes = "";
+
+  // set title
+  title = "Live";
+  res.locals.title = title;
+
+  //set timer 
+  req.app.locals.timeNowGameOne = 100;
+
+  res.locals.recipeThumbs = liveData.recipes;
+
+  // load view
+  res.render('recepten');
+
+  console.log(req.app.locals.gameFirst);
+  console.log(req.app.locals.gameSecond);
+  console.log(req.app.locals.gameThird);
+
 });
 
 router.get('/recipe/:index', function(req, res, next) {

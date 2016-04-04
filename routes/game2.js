@@ -22,16 +22,6 @@ router.get('/', function(req, res, next) {
 	res.render('game2.ejs');
 
 	req.app.locals.timeNowGameTwo;
-
-	function timeGameTwo(){
-	  if (req.app.locals.timeNowGameTwo > 0) {
-	      req.app.locals.timeNowGameTwo--;
-	      console.log(req.app.locals.timeNowGameTwo);
-	  	  setTimeout(timeGameTwo, 100);
-	  }
-	}
-
-	timeGameTwo()
 });
 
 router.post('/', function(req, res, next) {

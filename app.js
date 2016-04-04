@@ -11,6 +11,8 @@ var path = require('path'),
 
 var indexRouter = require('./routes/index');
 var liveRouter = require('./routes/live');
+var videoRouter = require('./routes/videos');
+var receptenRouter = require('./routes/recepten')
 var game1Router = require('./routes/game1');
 var game2Router = require('./routes/game2');
 var game3Router = require('./routes/game3');
@@ -61,6 +63,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', indexRouter);
 app.use('/live', liveRouter);
+app.use('/videos', videoRouter);
+app.use('/recepten', receptenRouter);
 app.use('/signatuur', game1Router);
 app.use('/technisch', game2Router);
 app.use('/spektakel', game3Router);
